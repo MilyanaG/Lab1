@@ -1,0 +1,29 @@
+<html>
+<head>	
+	<title>Лабораторная работа 1</title>
+	<script>
+	function result(){
+		var sum=0;
+		var N=Number(document.forms["frm"].elements["N"].value);
+		var X=Number(document.forms["frm"].elements["X"].value);
+		if (Math.abs(X)<1){
+			for(var n=0; n<=N; n++){
+				sum= sum+(X**(2*n+1))/(2*n+1);
+			}
+			document.write(sum);
+		}else{
+document.write("Значение X не удовлетворяет условию");
+}
+}
+	</script>
+</head>
+<body>
+	<form id="frm">
+		<label for="N">Введите верхнюю границу суммирования:</label>
+		<input type="text" id="N">
+		<label for="X">Введите X:</label>
+		<input type="text" id="X"> 
+		<input type="button" onclick="result()" value="Отправить">
+	</form>
+</body>
+</html>
